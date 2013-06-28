@@ -26,3 +26,15 @@ Set the minimum level of errors to display for a certain category:
     FFLogError(@"NetworkLogger", @"Network Error Test %@", @"123");   // Will display
     FFLogWarn(@"NetworkLogger", @"Network Warn Test %@", @"123");     // Will display
     FFLogDebug(@"NetworkLogger", @"Network Debug Test %@", @"123");   // Won't display
+
+**Verbose Options**
+
+There are verbose options that show the file, function, and line number:
+
+    FFLogVError(lgr, fmt, ...)
+    FFLogVWarn(lgr, fmt, ...) 
+    FFLogVDebug(lgr, fmt, ...)
+    
+Output:
+
+    -[FFLAppDelegate application:didFinishLaunchingWithOptions:] [Line 26] Network Error Test 123
